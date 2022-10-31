@@ -1,0 +1,18 @@
+Hashdeep
+A] To create hash of a particular given file using one or more hash algorithm -all or any one
+and display / save it in a multiple file
+
+i. hashdeep bank.txt
+ii. hashdeep -c md5 bank.txt(To apply multiple algo hashdeep -c md5,sha1,sha256 filename
+iii. hashdeep -c md5*.txt(To hash multiple files (say all text files) using md5-)
+1v hashdeep -c md5 -p 100 bank.txt(block of files)
+v. md5deep *.txt>hashset.txt (. To redirect the output of md5 hash of files to another file )
+Cat hashset.tx
+
+i hashdeep filename.txt
+ii hashdeep filename.txt> other.txt(the output of filename.txt will be stored in other.txt)
+
+B] To show auditing
+(Which of the text file will be corresponding to the hash value)
+(In the above example we have to file filename.txt and the o/p of that is stored in other.txt)
+hashdeep -a filename.txt -k other.txt

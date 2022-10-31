@@ -1,0 +1,32 @@
+Iptables is a command line interface used to set up and maintain tables for the Netfilter firewall
+
+I/P O/P fwd chain
+ 
+// Accepting packets from particular ip address
+iptables -A INPUT -s 192.168.0.23 -j DROP
+iptables -A INPUT -s 192.168.0.23 -j REJECT
+iptables -A INPUT -s 192.168.0.23 -j ACCEPT
+iptables -D INPUT 3(Delete)
+
+iptables -A OUTPUT -s 192.168.0.23 -j DROP
+iptables -A OUTPUT -s 192.168.0.23 -j REJECT
+iptables -A OUTPUT -s 192.168.0.23 -j ACCEPT
+iptables -D OUTPUT 3(Delete)
+
+iptables -A FORWARD -s 192.168.0.23 -j DROP
+iptables -A FORWARD -s 192.168.0.23 -j REJECT
+iptables -A FORWARD -s 192.168.0.23 -j ACCEPT
+iptables -D FORWARD 3(Delete)
+
+iptables -F(Flush)
+
+// ICMP
+iptables -A OUTPUT -p icpm -j REJECT
+iptables -A OUTPUT -p icpm -j ACCEPT
+iptables -A OUTPUT -p icpm -j DROP
+
+// Inserting input chain to accept packets for tcp protocol and telnet service
+
+iptables -i INPUT 3 -p tcp –dport 23 -j ACCEPT
+
+

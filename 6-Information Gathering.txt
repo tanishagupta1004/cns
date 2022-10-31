@@ -1,0 +1,17 @@
+Who is- It is used to find out information about a domain such as the owner of the domain , the owner's contact info and the name server that the domain is using
+whois tsec.edu
+
+Nslookup- It stands for Name Server lookup and is a useful command for getting info from DNS server. It is used to troubleshoot DNS related problem
+nslookup linkedin.com
+
+traceroot-It prints the route that a packet takes to reach the host. This command is useful when you want to know about the route and about all the hops that a packet filter
+-I yahoo.com
+
+dig- It stands for Domain Information Gaper and is used for retrieving info about DNS name server. It is basically used by network administration
+dig linkedin.com
+
+dimitry- It is designed to allow a user to collect public info about a target root
+dimitry linkedin.com
+
+Nikto It is an open source software written in perl language that is used to scan web server for the vulnerability that can be exploited and comprimise the server
+nikto -host tsec.edu -ssl

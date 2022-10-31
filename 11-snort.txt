@@ -1,0 +1,37 @@
+Snort
+What is IDS
+An intrusion detection system (IDS) is software specifically built to monitor network 
+traffic and discover irregularities.
+Once suspicious or malicious activity is discovered, an intrusion detection system 
+will send an alarm to specified technicians or IT administrators.
+
+Types of IDS
+Intrusion detection systems primarily use two key intrusion detection methods: 
+signature-based intrusion detection and anomaly-based intrusion detection.
+
+different modes of snort
+• Sniffer mode, which simply reads the packets off of the network and displays them for 
+you in a continuous stream on the console (screen).
+• Packet Logger mode, which logs the packets to disk. packet data and/or headers are 
+written to the hard drive of the host on which Snort runs
+• Network Intrusion Detection System (NIDS) mode, which performs detection and 
+analysis on network traffic. This is the most complex and configurable mode.
+
+Steps
+
+1. Installing snort conf in IDS mode and writing rules
+
+Use ifconfig to get enp0s3
+sudo apt-get install snort
+sudo gedit /etc/snort/snort.conf
+
+This will open up a file: ipvar HOME_NET 192.168.44.0/24
+
+2. To validate the changes made in snort.conf file 
+sudo snort -T -c /etc/snort/snort.conf enp0s3
+
+3. To set the snort in IDS mode
+
+sudo snort -A console -q -u snort -g snort -c/etc/snort/snort.conf enp0s3
+
+

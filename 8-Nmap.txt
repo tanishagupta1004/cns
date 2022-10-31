@@ -1,0 +1,11 @@
+NMAP
+What is NMAP used for
+Different types of scanning
+1. TCP connect(0) scanning
+nmap -sT ipaddress
+
+2. TCP SYN scan
+nmap -sS ipaddress
+
+3. TCP FIN scan
+nmap -sF ipaddress

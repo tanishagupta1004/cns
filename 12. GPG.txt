@@ -1,0 +1,31 @@
+1. Generate private key and public key pairs for sender and reciever
+gpg --gen-key
+tanisha tanisha@gmail.com
+receiver receiver@gmail.com
+
+2. Create a file containing sender's and receiver's public key which can be sent to others
+gpg --export -a tanisha>tanisha_pub
+gpg --export -a receiver>receiver_pub
+
+3. Create a file containing sender's and receiver's private key which can be sent to others
+gpg --export-secret-key -a tanisha>tanisha_pri
+gpg --export-secret-key -a receiver>receiver_pri
+
+4. You can create a fingerprint of key using the command 
+gpg --fingerprint receiver@gmail.com
+
+5. Sender needs to add in his public key ring, the public key of receiver
+gpg --import receiver_pub
+
+6.  Listing public keys in keyring
+gpg --list-keys
+
+
+7. Sender can sign the public key of receiver using command 
+gpg --sign-key receiver@gmail.com
+
+8. Encrypt the data to send
+gpg --encrypt -r receiver@gmail.com somefile.gpg(a gpg file will be created)
+
+9. Decrypt a file
+gpg -o myfiledecrypted -d somefile.txt.gpg

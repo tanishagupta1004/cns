@@ -1,0 +1,19 @@
+Wireshark and TCPDUMP
+
+A. Capture packets coming from a particular source default gateway
+tcmpdump
+#tcpdump -n src ip
+#tcpdump -n dst ip
+
+
+B. Capturing traffic from particular host or port
+
+//#tcpdump -n port 80
+//#tcpdump port 80
+//#tcpdump -n portrange 21-23
+
+C. Capture only icmp/tcp/http packets for a particular protocol
+#tcpdump -n icmp
+
+D. Capture packets from an ethernet interface
+#tcpdump -i eth0
